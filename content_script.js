@@ -32,6 +32,7 @@ function handleText(textNode)
 	text = text.replace(/Stanford/g, "Stanfurd");
 	text = text.replace(/stanford/g, "stanfurd");
 	text = text.replace(/STANFORD/g, "STANFURD");
+	text = text.replace(/\bSTAN\b/g, "FURD");
 	
 	textNode.nodeValue = text;
 }
