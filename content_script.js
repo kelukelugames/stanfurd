@@ -1,7 +1,14 @@
-walk(document.body);
+walkDocument();
+setInterval(walkDocument, 1050);
+
+function walkDocument()
+{
+	walk(document.body);
+}
 
 function walk(node) 
-{var child, next;
+{
+	var child, next;
 
 	switch ( node.nodeType )  
 	{
