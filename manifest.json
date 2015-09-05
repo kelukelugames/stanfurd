@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Stanfurd",
+	"version": "1.0",
+	"description": "Replace Stanford with Stanfurd.",
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
