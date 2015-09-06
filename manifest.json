@@ -7,7 +7,7 @@
 	[
 		{
 			"matches": ["*://*/*"],
-			"js": ["content_script.js"],
+			"js": ["replaceText.js"],
 			"run_at": "document_end",
 			"all_frames": true
 		}
