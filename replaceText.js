@@ -1,3 +1,4 @@
+document.title = replaceText(document.title)
 walkDocument();
 setInterval(walkDocument, 1050);
 
@@ -36,11 +37,14 @@ function handleText(textNode)
 {
 	var text = textNode.nodeValue;
 
+	
+	textNode.nodeValue = replaceText(text);
+}
+
+function replaceText(text) {
 	text = text.replace(/Stanford/g, "Stanfurd");
 	text = text.replace(/stanford/g, "stanfurd");
 	text = text.replace(/STANFORD/g, "STANFURD");
 	text = text.replace(/\bSTAN\b/g, "FURD");
-	
-	textNode.nodeValue = text;
+	return text;
 }
-
