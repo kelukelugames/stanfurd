@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Stanfurd",
-	"version": "1.1",
+	"version": "1.2",
 	"description": "Replace Stanford with Stanfurd.",
 	"content_scripts": 
 	[
@@ -10,6 +10,11 @@
 			"js": ["replaceText.js"],
 			"run_at": "document_end",
 			"all_frames": true
-		}
+		},
+	    {
+	    	"matches": ["*://www.stanford.edu/*"],
+	    	"js": ["replaceImage.js"],
+	    	"run_at": "document_end"
+	    }
 	]
 }
